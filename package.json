@@ -11,6 +11,7 @@
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
+    "express-swagger-generator": "^1.1.17",
     "jsonwebtoken": "^9.0.2",
     "minimatch": "^9.0.3",
     "morgan": "~1.9.1",

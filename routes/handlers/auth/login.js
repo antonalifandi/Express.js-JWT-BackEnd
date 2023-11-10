@@ -38,7 +38,7 @@ if (!body.email || !body.password)
     };
 
     const token = jwt.sign({data}, "dahsdhalsdh", {
-        expiresIn: "60s",
+        expiresIn: "1d",
     });
 
     return res.json({token});

@@ -1,11 +1,15 @@
-const {User} = require("../../../models");
+const { User } = require("../../../models");
 
-//Get all users data
+// Get all users data
 module.exports = async (req, res) => {
-  const users = await User.findAll({
-    attributes:{exclude: ["password"]},
-  });
+  try {
+    const users = await User.findAll({
+      attributes: { exclude: ["password"] },
+    });
 
-  return res.json(users);
+    res.json(users);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
 };
-
